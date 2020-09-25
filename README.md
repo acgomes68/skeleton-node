@@ -356,9 +356,9 @@ A partir desse ponto, o **projeto estará totalmente desinstalado** e somente re
 ## **Tecnologias** ##
 - [**NodeJS**](https://nodejs.org/en/): linguagem **Javascript** padrão **ES6** voltada para o **backend** e a construção das **API's**;
 - [**Postgres**](https://www.postgresql.org/): banco de dados **relacional**;
-- [**MongoDB**](https://www.mongodb.com/): banco de dados **não-relacional** que usa **documentos JSON** para os dados;
+- [**MongoDB**](https://www.mongodb.com/): banco de dados **não-relacional** que usa **documentos JSON** como formato para os dados;
 - [**Redis**](https://redis.io/): banco de dados **não-relacional** padrão **chave-valor** normalmente utilizado para **filas e cache**;
-- [**GraphQL**](https://graphql.org/): banco de dados **não-relacional** padrão **chave-valor** normalmente utilizado para **filas e cache**;
+- [**GraphQL**](https://graphql.org/): Query Language fortemente tipada e direcionada para interação entre frontend, backend e ORM's;
 - [**Docker**](https://www.docker.com/): plataforma que facilita a criação e a administração de pacotes de software em ambientes isolados e padronizados;
 
 ---
