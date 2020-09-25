@@ -6,6 +6,7 @@
 ![Badge](https://img.shields.io/badge/Postgres-v11-%23336791?style=plastic&logo=PostgreSQL)
 ![Badge](https://img.shields.io/badge/MongoDB-v11-%2347A248?style=plastic&logo=MongoDB)
 ![Badge](https://img.shields.io/badge/Redis-v11-%23DC382D?style=plastic&logo=Redis)
+![Badge](https://img.shields.io/badge/license-MIT-brightgreen?style=plastic)
 
 <h4 align="center"><b>skeleton-node</b> | <b>Em construção...</b></h4>
 
