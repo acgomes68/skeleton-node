@@ -1,0 +1,28 @@
+version: "3"
+
+services:
+  node:
+    build: .
+    depends_on:
+      - postgres
+    image: acgomes68/alpine-node:latest
+    # restart: always
+    container_name: node-${APP_NAME}
+    command: yarn start
+    ports:
+    - ${APP_PORT}:3333
+    volumes:
+    - .:/home/node/app
+
+  postgres:
+    image: postgres:11-alpine
+    container_name: postgres-${POSTGRES_DATABASE}
+    environment:
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWD}
+    ports:
+    - ${POSTGRES_PORT}:5432
+    volumes:
+    - modelo-data:/var/lib/postgresql/data
+
+volumes:
+    modelo-data:
