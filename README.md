@@ -40,28 +40,29 @@ Esse é um modelo inicial para desenvolvimento de **API's RESTful** que pode ser
 <br /><br />
 
 ### **Funcionalidades** ###
-[x] Estrutura básica<br />
-[x] Dockerfile<br />
-[x] Docker-compose<br />
-[x] Atalhos de comandos com Make<br />
-[x] Imagem pequena com Alpine<br />
-[x] Padronização e estilização do código<br />
-[x] Utilização de variáveis de ambiente<br />
-[x] Persistência de dados em volume do Docker<br />
-[x] Restart automático dos serviços após alteração do código<br />
-[x] Implementação de ES6 em todo o código<br />
-[x] Validação de conteúdo postado<br />
-[x] Tratamento de erros e exceções<br />
-[x] ORM para persistência de dados<br />
-[x] Atalhos de comandos com Make<br />
-[x] Processo automático de instalação e desinstalação<br />
-[x] Atalho para atualização de dependências<br />
-[x] Atalho para visualização de logs com atualização automática<br />
-[x] Utilização de migrations e seeds<br />
-[ ] Ambiente gráfico integrado para teste dos serviços<br />
-[ ] Implementação de tipagem e OOP com Typescript<br />
-[ ] Path Mapping para imports<br />
-[ ] Testes unitários<br />
+
+- [x] Estrutura básica<br />
+- [x] Dockerfile<br />
+- [x] Docker-compose<br />
+- [x] Atalhos de comandos com Make<br />
+- [x] Imagem pequena com Alpine<br />
+- [x] Padronização e estilização do código<br />
+- [x] Utilização de variáveis de ambiente<br />
+- [x] Persistência de dados em volume do Docker<br />
+- [x] Restart automático dos serviços após alteração do código<br />
+- [x] Implementação de ES6 em todo o código<br />
+- [x] Validação de conteúdo postado<br />
+- [x] Tratamento de erros e exceções<br />
+- [x] ORM para persistência de dados<br />
+- [x] Atalhos de comandos com Make<br />
+- [x] Processo automático de instalação e desinstalação<br />
+- [x] Atalho para atualização de dependências<br />
+- [x] Atalho para visualização de logs com atualização automática<br />
+- [x] Utilização de migrations e seeds<br />
+- [ ] Ambiente gráfico integrado para teste dos serviços<br />
+- [ ] Implementação de tipagem e OOP com Typescript<br />
+- [ ] Path Mapping para imports<br />
+- [ ] Testes unitários<br />
 <br />
 
 ### **Arquitetura** ###
