@@ -7,9 +7,17 @@
 ![Badge](https://img.shields.io/badge/MongoDB-v11-%2347A248?style=plastic&logo=MongoDB)
 ![Badge](https://img.shields.io/badge/Redis-v11-%23DC382D?style=plastic&logo=Redis)
 
-# **skeleton-node** #
-Skeleton NodeJS-GraphQL-Postgres-MongoDB-Redis-Docker
-<br /><br />
+<h4 align="center"><b>skeleton-node</b> | <b>Em construção...</b></h4>
+
+## **skeleton-node** ##
+### Skeleton NodeJS-GraphQL-Postgres-MongoDB-Redis-Docker ###
+
+---
+
+## **Descrição** ##
+Esse é um modelo inicial para desenvolvimento de **API's RESTful** que pode ser utilizado com **Docker** tendo como linguagem base o **NodeJS** acessando uma base relacional **Postgres** e bases não relacionais **MongoDB** e **Redis** via **GraphQL**. Na implementação com **Docker** é utilizada uma imagem **NodeJS-LTS** instalada em uma distribuição **GNU/Linux Alpine**.
+
+---
 
 **Tabela de conteúdos**
 =================
@@ -20,24 +28,19 @@ Skeleton NodeJS-GraphQL-Postgres-MongoDB-Redis-Docker
     * [Modelo de dados](#Modelo-de-dados)
 * [Instalação](#Instalação)
     * [Pré Requisitos](#Pré-Requisitos)
+    * [Opcional](#Opcional)
     * [Clonando o projeto](#Clonando-o-projeto)
     * [Árvore de diretórios](#Árvore-de-diretórios)
     * [Atalhos de comandos](#Atalhos-de-comandos)
     * [Primeira execução](#Primeira-execução)
 * [Utilização](#Utilização)
-    * [Iniciar projeto](#Iniciar-projeto)
-    * [Parar projeto](#Iniciar-projeto)
-    * [Testar projeto](#Testar-projeto)
-    * [Atualizar dependências](#Atualizar-dependências)
+* [Dependências](#Dependências)
 * [Desinstalação](#Desinstalação)
 * [Tecnologias](#Tecnologias)
 * [Referências](#Referências)
 <!--te-->
-<br />
 
-## **Descrição** ##
-Esse é um modelo inicial para desenvolvimento de **API's RESTful** que pode ser utilizado com **Docker** tendo como linguagem base o **NodeJS** acessando uma base relacional **Postgres** e bases não relacionais **MongoDB** e **Redis** via **GraphQL**. Na implementação com **Docker** é utilizada uma imagem **NodeJS-LTS** instalada em uma distribuição **GNU/Linux Alpine**.
-<br /><br />
+---
 
 ### **Funcionalidades** ###
 
@@ -63,21 +66,25 @@ Esse é um modelo inicial para desenvolvimento de **API's RESTful** que pode ser
 - [ ] Implementação de tipagem e OOP com Typescript<br />
 - [ ] Path Mapping para imports<br />
 - [ ] Testes unitários<br />
-<br />
+
+---
 
 ### **Arquitetura** ###
 Foi desenvolvida uma arquitetura voltada para **microsserviços** com cada um deles separados em **containers Docker** que podem ser escalados mediante a demanda necessária. A estrutura básica foi desenvolvida em **NodeJS com Express**, ambos responsáveis pela gestão e roteamento das requisições **HTTP usando padrão REST**.
 Foi criada uma pequena estrutura de dados relacionais com **Postgres** e não relacionais com **MongoDB** e **Redis**, sendo que a comunicação da camada de código com as bases de dados se faz através da abstração do **GraphQL**.
-<br /><br />
+
+---
 
 ### **Modelo de dados** ###
 
 ![Screenshot](public/screenshots/modelo_dados.png)
-<br /><br />
+
+---
 
 ## **Instalação** ##
 O processo de instalação envolve basicamente a **clonagem desse projeto**  através do **Git** (ver abaixo) e a **execução de um simples comando**. Porém, para que tudo funcione adequadamente é fundamental que todos os **pré-requisitos** sejam atendidos integralmente.
-<br /><br />
+
+---
 
 ### **Pré-Requisitos** ###
 Para que seja realizada a instalação, construção, execução e testes são necessárias as seguintes tecnologias previamente instaladas que devem ser verificadas através do **terminal  (Linux / MacOS)** ou **CommandShell/ CMD / PowerShell  (Windows)**:
@@ -130,22 +137,34 @@ Para que seja realizada a instalação, construção, execução e testes são n
 
     Caso ainda não esteja instalado:<br />
     https://docs.docker.com/compose/install/
-<br /><br />
+
+---
+
+### **Opcional** ####
+Além dos pré-requisitos descritos acima seria interessante a utilização de um editor de texto, de preferência uma IDE adequada para desenvolvimento e codificação de software, como sugestão, o [vsCode](https://code.visualstudio.com/).
+Outra sugestão que não é obrigatória, mas pode ajudar, seria a instalação do programa ***curl***:
+- **GNU/Linux**
+    ```
+    sudo apt-get install curl
+    ```
+- **Windows**<br />
+    https://curl.haxx.se/windows/
+
+---
 
 ### **Clonando o projeto** ###
 Considerando que todos os passos descritos acima foram realizados, abrir o terminal e acessar o local onde deseja instalar o projeto, por exemplo, o **próprio diretório do usuário**:<br />
 ```
-?>cd ~
+# Acessar diretório do usuário
+$ cd ~
+
+# Realizar o clone desse projeto em um diretório local com o nome desejado, por exemplo "novo-projeto"
+$ git clone https://github.com/acgomes68/skeleton-node.git novo-projeto
 ```
 
-Agora basta realizar o **clone** desse projeto através do **Git** no diretório atual com o nome do projeto desejado, por exemplo, ***novo-projeto***, ficaria assim:
+Se tudo estiver OK, todos os arquivos do projeto serão baixados para o diretório /home/***seu-usuario***/**novo-projeto**, de modo que a estrutura fique como demonstrado abaixo.
 
-```
-?>git clone https://github.com/acgomes68/skeleton-node.git novo-projeto
-```
-
-Se tudo estiver OK, todos os arquivos do projeto serão baixados para o diretório /home/***seu-usuario***/novo-projeto, de modo que a estrutura fique como demonstrado abaixo.
-<br /><br />
+---
 
 ### **Árvore de diretórios** ###
 ```
@@ -185,17 +204,17 @@ Se tudo estiver OK, todos os arquivos do projeto serão baixados para o diretór
 ├── README.md
 └── yarn.lock
 ```
-<br />
+
+---
 
 ### **Atalhos de comandos** ###
 Para facilitar a utilização foram criados alguns atalhos com as principais funcionalidades. Para ter acesso aos atalhos é necessário certificar-se que está no diretório raiz do projeto usando o comando abaixo no terminal:<br />
 ```
-?>cd ~/novo-projeto
-```
+# Acessar diretório raiz do projeto criado, conforme exemplo...
+$ cd ~/novo-projeto
 
-Desta feita, para listar todos os atalhos disponíveis executar:<br />
-```
-?>make help
+# Listar todos os atalhos disponíveis executar
+$ make help
 ```
 
 Deve aparecer algo como a imagem abaixo.
@@ -215,10 +234,11 @@ Commands:
   uninstall  Stop and clear all services
   update     Update Node dependencies with yarn
 ```
-<br />
+
+---
 
 ### **Primeira execução** ###
-Através de qualquer editor de texto, atualizar as informações do arquivo **.env.example** que está na **raiz do projeto** e renomeá-lo para **.env.**. Exemplo:
+Através de qualquer editor de texto, atualizar as informações do arquivo **.env.example** que está na **raiz do projeto** e renomeá-lo para **.env.**. Exemplo de preenchimento:
 ```
 # Node settings
 NODE_ENV=development
@@ -238,7 +258,7 @@ POSTGRES_PORT=5432
 ```
 Após isso, conforme descrito no item anterior, através do **terminal** executar:<br />
 ```
-?>make install
+$ make install
 ```
 Após o final da instalação, acessar os serviços através do endpoint:<br />
 http://localhost:3333/
@@ -253,36 +273,34 @@ Esse passo pode ser realizado através do navegador, pelo ambiente gráfico de t
 
 **Visão através do comando curl**<br />
 ```
-?>curl http://localhost:3333/users
+$ curl http://localhost:3333/users
 [{"id":1,"name":"test user","email":"user@test.com","createdAt":"2020-09-25T03:33:09.490Z","updatedAt":null}]%
 ```
-<br />
+
+---
 
 ## **Utilização** ##
-A partir do momento que o projeto foi instalado ele é **automaticamente iniciado**.
+A partir do momento que o projeto foi instalado ele é **automaticamente iniciado**. Porém, há a possibilidade de interação manual, de modo que se pode parar a execução do projeto, reiniciá-lo, executar testes, atualizar dependências, etc. A seguir, a demonstração de algumas das opções citadas, sempre através do terminal a partir do diretório raiz do projeto:
+```
+# Iniciar a execução do projeto manualmente
+$ make start
 
-### **Iniciar projeto** ###
-Caso necessite **iniciar manualmente** o projeto, basta certificar-se que está no diretório raiz do projeto e executar no terminal:
-```
-?>make start
-```
-<br />
+# Parar a execução o projeto manualmente
+$ make stop
 
-### **Parar projeto** ###
-Caso necessite **parar manualmente** o projeto, basta certificar-se que está no diretório raiz do projeto e executar no terminal:
-```
-?>make stop
-```
-<br />
+# Verificar padrão de sintaxe e formatação, teste unitário e cobertura do código
+$ make test
 
-### **Testar projeto** ###
-Para **garantir a execução** adequada antes de gerar um **build** para a **produção** é prudente que seja realizado um **teste automatizado** que envolve a **verificação do padrão de sintaxe e formatação**, além dos **testes unitários** e a **cobertura do código**. Para tal, basta certificar-se que está no diretório raiz do projeto e executar no terminal:
-```
-?>make test
-```
-<br />
+# Verificar o status dos serviços que compõem o projeto
+$ make status
 
-### **Atualizar dependências** ###
+# Visualizar os logs dos serviços atualizados automaticamente
+$ make logs
+```
+
+---
+
+### **Dependências** ###
 Assim que o projeto é instalado, as dependências iniciais são as seguintes:
 - Gerais
     - **cors**: autentidação no redirecionamento de domínio;
@@ -290,7 +308,6 @@ Assim que o projeto é instalado, as dependências iniciais são as seguintes:
     - **express**: roteamento e manipulação HTTP para API REST;
     - **pg**: apoio na utilização do Postgres;
     - **sequelize**: persistência de dados para Postgres;
-    - **shortid**: gerador de ids curtos;
     - **youch**: tratamento de erros e exceções;
     - **yup**: validação de dados postados;
 
@@ -301,45 +318,39 @@ Assim que o projeto é instalado, as dependências iniciais são as seguintes:
     - **sequelize-cli**: execução de testes e migrations através da persistência com Postgres;
     - **sucrase**: adaptação do código para ES6;
 
-Mas, caso exista a necessidade de **adicionar novas dependências**, executar através do terminal:
+Mas, caso exista a necessidade de **adicionar ou remover dependências**, utilizar o **yarn** através do terminal. Como exemplo de instalação e remoção de pacote será utilizado o **socket.io**:
 ```
-?>yarn add <dependência>
-```
+# Instalar o pacote socket.io como dependência do projeto
+$ yarn add socket.io
 
-No caso, **<dependência>** corresponde ao nome do pacote que deseja adicionar ao seu projeto. Por exemplo para instalar o pacote **socket.io**, executar no terminal:
-```
-?>yarn add socket.io
-```
+# Atualizar lista de dependências do projeto
+$ make update
 
-Da mesma forma, caso queira **remover alguma dependência** que não seja necessária para o projeto, executar através do terminal:
-```
-?>yarn remove <dependência>
-```
+# Remover o pacote socket.io como dependência do projeto
+$ yarn remove socket.io
 
-No caso, **<dependência>** corresponde ao nome do pacote que deseja remover do projeto. Por exemplo, para excluir do projeto o pacote **shortid**, executar no terminal:
+# Atualizar lista de dependências do projeto
+$ make update
 ```
-?>yarn remove shortid
-```
-**Em ambos os casos** citados acima ou mesmo simplesmente para **atualizar as dependências existentes**, executar através do terminal:<br />
-```
-?>make update
-```
-<br />
+Repare que, caso a **lista de dependências do projeto seja alterada** através da instalação ou remoção de algum pacote também se faz **necessária a atualização da lista de dependências do container**. Isso acontece pois a execução do **yarn** nos exemplos acima **atua especificamente no diretório local da instalação**, mas **não age sobre a instalação que está no container**, pois **não há sincronização de volumes na pasta node_modules** (repare o arquivo .dockerignore).
+
+---
 
 ## **Desinstalação** ##
-Para **desinstalação do projeto**, considerando que esteja no diretório raiz do mesmo, executar através do terminal:<br />
+Para **remoção do projeto**, considerando que esteja no diretório raiz do mesmo, executar através do terminal:<br />
 ```
-?>make uninstall
+$ make uninstall
 ```
 Após a execução do comando acima as **modificações realizadas após a instalação serão perdidas**, mas **ainda haverá a possibilidade da recuperar o projeto para o seu estado inicial** seguindo as mesmas orientações descritas no item [Primeira execução](#Primeira-execução).
 
-Mas para a **desinstalação total**, considerando que esteja no diretório raiz do mesmo e usando o nome dado no nosso exemplo **novo-projeto**, executar através do terminal:<br />
+Mas para a **remoção total**, considerando que esteja no diretório raiz do mesmo e usando o nome dado no nosso exemplo **novo-projeto**, executar através do terminal:<br />
 ```
-?>cd ..
-?>rm -rf novo-projeto
+$ cd ..
+$ rm -rf novo-projeto
 ```
-A partir desse ponto, o projeto estará totalmente desinstalado e somente realizando todo o processo novamente poderá retornar ao estado inicial.
-<br />
+A partir desse ponto, o **projeto estará totalmente desinstalado** e somente realizando todo o processo novamente poderá retornar ao estado inicial.
+
+---
 
 ## **Tecnologias** ##
 - [**NodeJS**](https://nodejs.org/en/): linguagem **Javascript** padrão **ES6** voltada para o **backend** e a construção das **API's**;
@@ -348,7 +359,8 @@ A partir desse ponto, o projeto estará totalmente desinstalado e somente realiz
 - [**Redis**](https://redis.io/): banco de dados **não-relacional** padrão **chave-valor** normalmente utilizado para **filas e cache**;
 - [**GraphQL**](https://graphql.org/): banco de dados **não-relacional** padrão **chave-valor** normalmente utilizado para **filas e cache**;
 - [**Docker**](https://www.docker.com/): plataforma que facilita a criação e a administração de pacotes de software em ambientes isolados e padronizados;
-<br /><br />
+
+---
 
 ## **Referências** ##
 [Iniciando com GraphQL no NodeJS e ExpressJS](https://blog.rocketseat.com.br/iniciando-graphql-nodejs-expressjs/)<br />
