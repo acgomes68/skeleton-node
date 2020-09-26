@@ -296,21 +296,15 @@ Assim que o projeto é instalado, as dependências iniciais são as seguintes:
     - **prettier**: formatação e estilização do código;
     - **sucrase**: adaptação do código para ES6;
 
-Mas, caso exista a necessidade de **adicionar ou remover dependências**, utilizar o **yarn** através do terminal. Como exemplo de instalação e remoção de pacote será utilizado o **socket.io**:
+Mas, caso exista a necessidade de **adicionar ou remover dependências**, utilizar as opções de **atalhos de comandos** através do terminal. Como exemplo de instalação e remoção de pacote será utilizado o **socket.io**:
 ```
 # Instalar o pacote socket.io como dependência do projeto
-$ yarn add socket.io
-
-# Atualizar lista de dependências do projeto
-$ make update
+$ make add socket.io
 
 # Remover o pacote socket.io como dependência do projeto
-$ yarn remove socket.io
-
-# Atualizar lista de dependências do projeto
-$ make update
+$ make remove socket.io
 ```
-Repare que, caso a **lista de dependências do projeto seja alterada** através da instalação ou remoção de algum pacote também se faz **necessária a atualização da lista de dependências do container**. Isso acontece pois a execução do **yarn** nos exemplos acima **atua especificamente no diretório local da instalação**, mas **não age sobre a instalação que está no container**, pois **não há sincronização de volumes na pasta node_modules** (repare o arquivo .dockerignore).
+Os atalhos **make add** e **make remove** atualizam a lista de dependências do **diretório local da instalação** e da **instalação do container** mantendo ambas **sincronizadas**, mas **respeitando-se a plataforma** de execução de cada ambiente. Importante ressaltar que o diretório **node_modules não está sincronizado** através dos volumes do Docker (repare o arquivo **.dockerignore**).
 
 ---
 
