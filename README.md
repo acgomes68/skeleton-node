@@ -34,6 +34,8 @@ Esse é um modelo inicial para desenvolvimento de **API's RESTful** que pode ser
 * [Desinstalação](#Desinstalação)
 * [Tecnologias](#Tecnologias)
 * [Referências](#Referências)
+* [Autor](#Autor)
+* [Licença](#Licença)
 <!--te-->
 
 ---
@@ -206,17 +208,20 @@ Deve aparecer algo como a imagem abaixo.
 usage: make COMMAND
 
 Commands:
-  clean      Clean dependencies
-  help       Show this help screen
-  install    Create and start containers
-  logs       Watch log output
-  restart    Restart all containers
-  start      Start all containers
-  status     Show containers current status
-  stop       Stop all services
-  test       Run eslint and application unit tests
-  uninstall  Stop and clear all services
-  update     Update Node dependencies with yarn
+  add <package>     Install Node package with yarn
+  clean             Clean dependencies
+  help              Show this help screen
+  install           Create and start containers
+  logs              Watch log output
+  remove <package>  Uninstall Node package with yarn
+  restart           Restart all containers
+  run               Run main service with curl
+  start             Start all containers
+  status            Show containers current status
+  stop              Stop all services
+  test              Run eslint and application unit tests
+  uninstall         Stop and clear all services
+  update            Update Node dependencies with yarn
 ```
 
 ---
@@ -249,7 +254,7 @@ Esse passo pode ser realizado através do navegador ou até mesmo pelo terminal 
 
 **Visão através do comando curl**<br />
 ```
-$ curl http://localhost:3333
+$ make run
 {"Teste Node":"Tranquilo, funcionou!"}%
 ```
 
@@ -349,23 +354,6 @@ A partir desse ponto, o **projeto estará totalmente desinstalado** e somente re
 
 [![Linkedin Badge](https://img.shields.io/badge/-Antonio-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/antonio-carlos-gomes/)](https://www.linkedin.com/in/antonio-carlos-gomes/)
 [![Gmail Badge](https://img.shields.io/badge/-acgomes68@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:acgomes68@gmail.com)](mailto:acgomes68@gmail.com)
-
----
-
-## **Agradecimentos** ##
-Abaixo lista de pessoas e empresas que são inspirações e referências para realização desse projeto. A todos os citados e aos demais que, por ventura, não estejam na lista, mas que, com certeza, estarão sempre na minha extensa lista de gratidão.<br />
-
-**MUITO OBRIGADO!**
-
-PS: importante frisar que é uma lista ordenada alfabeticamente, não por grau de relevância, pois todos, sem exceção, possuem igual e gigante importância.
-
-- [Diego Fernandes](https://blog.rocketseat.com.br/author/diego/)
-- [Guilherme Rodz]()
-- [Higo Ribeiro](https://blog.rocketseat.com.br/author/higo/)
-- [Robson Marques](https://www.linkedin.com/in/robsonmarquescode/)
-- [Rocketseat](https://rocketseat.com.br/)
-- [Thiago Marinho](https://blog.rocketseat.com.br/author/thiago/)
-
 
 ---
 
